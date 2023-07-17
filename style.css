@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=MonteCarlo&family=Montez&display=swap');
+
+
+/* ELEMENTOS GERAIS */
+* {
+    font-family: 'Montserrat';
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'MonteCarlo';
+    color: #0982eb;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media all and (min-width: 560px) {
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        flex-flow: row wrap;
+    }
+}
+
+.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.66%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+.col-5 {
+    width: 41.66%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 66.66%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.66%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+p {
+    font-size: 18px;
+    color: #303030;
+}
+
+@media only screen and (max-width: 768px) {
+    [class*="col-"] {
+        width: 100%;
+    }
+}
+
+/* MENU */
+nav {
+    background-color: #7CB0DE;
+}
+
+nav ul {
+    display: flex;
+    gap: 15px;
+    justify-content: space-around;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+@media only screen and (max-width: 768px) {
+    nav ul {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+nav ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color: #FFFFFF;
+    padding: 15px 25px;
+    transition: .5s ease-in-out;
+}
+
+@media only screen and (max-width: 768px) {
+    nav ul li a {
+        width: 100%;
+    }
+
+}
+
+nav ul li a:hover {
+    transition: .5s ease-in-out;
+    background-color: #0982eb;
+}
+
+/* SOBRE MIM  */
+.sobre P {
+    text-align: justify;
+}
+
+.sobre img {
+    max-height: 500px;
+    width: 100%;
+    object-fit: cover;
+    object-position: bottom center;
+    border-radius: 30px;
+    border: solid 2px #0982eb;
+}
+
+/* FORMAÇÃO */
+.formacao h1 {
+    text-align: center;
+}
+
+.formacao .estudo {
+    border: outset 1px #0982eb;
+    border-radius: 30px;
+    padding: 20px 15px;
+    height: 150px;
+    transition: .8s ease-in-out;
+}
+
+@media only screen and (max-width: 768px) {
+    .formacao .estudo {
+        height: auto;
+    }
+}
+
+.formacao .estudo:hover {
+    transition: .8s ease-in-out;
+    background-color: #7CB0DE;
+}
+
+.formacao .estudo:hover h2,
+.formacao .estudo:hover p {
+    color: #FFFFFF;
+}
+
+.formacao .estudo h2,
+.formacao .estudo p {
+    margin: 0;
+    text-align: center;
+}
+
+.formacao .habilidades {
+    margin-top: 60px;
+    clear: both;
+}
+
+.formacao .habilidades h2 {
+    text-align: center;
+    font-size: 30px;
+}
+
+.formacao .habilidades img {
+    max-width: 150px;
+    margin: 0 auto;
+    display: flex;
+}
+
+/* PORTFOLIO */
+.portfolio h1,
+.portfolio h2,
+.portfolio p {
+    text-align: center;
+}
+
+.portfolio img {
+    padding: 20px;
+    border: outset 1px #0982eb;
+    border-radius: 30px;
+}
+
+/* CONTATO */
+.contato h1 {
+    text-align: center;
+    font-size: 40px;
+}
+
+.contato form {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contato form label,
+.contato form input,
+.contato form textarea {
+    width: 100%;
+    margin: 15px 0;
+}
+
+.contato form label {
+    font-size: 16px;
+    color: #0982eb;
+    font-weight: 500;
+}
+
+.contato form input,
+.contato form textarea {
+    border: none;
+    background-color: #f3eeee;
+    padding: 15px 10px;
+    border-radius: 20px;
+    font-size: 18px;
+}
+
+.contato form input:focus-visible,
+.contato form textarea:focus-visible {
+    outline: none;
+    border: solid 1px #0982eb;
+}
+
+.contato form input[type="submit"] {
+    background-color: #7CB0DE;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    transition: .8s ease-in-out;
+}
+
+.contato form input[type="submit"]:hover {
+    background-color: #0982eb;
+    transition: .8s ease-in-out;
+    cursor: pointer;
+}
